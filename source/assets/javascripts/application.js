@@ -7,45 +7,6 @@ $(function() {
   
   var $main = $('#main');
   var $body = $('body');
-
-  function pjaxLoad(url) {
-    $.pjax({
-      url: url,
-      container: '#main',
-      fragment: '#main'
-    });
-  }
-
-  // Fadeout
-  $d.on('pjax:start', function(e) {
-    //
-  });
-
-  $d.on('pjax:end', function(e) {
-    picturefill();
-    TweenLite.to($('#clone'), 0.8, {
-      opacity: 0,
-      onComplete: function() {
-        $('#clone').remove();
-        $body.css('overflow', 'auto');
-        picturefill();
-      }
-    });
-  });
-
-  // if ($.support.pjax) {
-  //   // Load
-  //   $d.on('click', '.tile', function(e) {
-  //     $tile = $(this);
-  //     e.preventDefault();
-  //     pjaxLoad($tile.attr('href'));
-  //   });
-  //   // Back button
-  //   $d.on('click', '.lemon-back', function(e) {
-  //     e.preventDefault();
-  //     pjaxLoad($(this).attr('href'));
-  //   });
-  // }
   
   $d.on('click', '#see-our-videos a', function(e) {
     e.preventDefault();
@@ -84,14 +45,23 @@ $(function() {
     e.preventDefault();
     $('#player').remove();
     $body
-      .append('<div id="player" style="top:' + $body.scrollTop() + 'px"><iframe src="//player.vimeo.com/video/' + $(this).data('vid') + '?title=0&amp;byline=0&amp;portrait=0&amp;color=e74c3c&amp;autoplay=1" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe><button class="player-close">Close</button></div')
+      .append('<div id="player" style="top:' + $body.scrollTop() + 'px"><iframe src="//player.vimeo.com/video/' + $(this).data('vid') + '?title=0&amp;byline=0&amp;portrait=0&amp;color=e74c3c&amp;autoplay=1" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe><button class="close">Close</button></div')
       .addClass('player-active');
     responsiveVideos();
   });
   
-  $d.on('click', '.player-close', function(e) {
+  $d.on('click', '.close', function(e) {
+    e.preventDefault();
     $('#player').remove();
-    $body.removeClass('player-active');
+    $body.removeClass('player-active about-active');
+  });
+  
+  $d.on('click', '#cta .cta', function(e) {
+    e.preventDefault();
+    $body.addClass('about-active');
+    $('#about').css({
+      'top': $body.scrollTop()
+    });
   });
   
 });
