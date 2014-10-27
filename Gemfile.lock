@@ -16,7 +16,6 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
-    camertron-eprun (1.1.0)
     celluloid (0.16.0)
       timers (~> 4.0.0)
     chunky_png (1.3.1)
@@ -42,9 +41,7 @@ GEM
     erubis (2.7.0)
     eventmachine (1.0.3)
     execjs (2.2.1)
-    exifr (1.1.3)
     ffi (1.9.6)
-    fspath (2.0.6)
     haml (4.0.5)
       tilt
     hike (1.2.3)
@@ -54,14 +51,6 @@ GEM
     htmlcompressor (0.1.2)
     http_parser.rb (0.6.0)
     i18n (0.6.11)
-    image_optim (0.9.1)
-      exifr (~> 1.1.3)
-      fspath (~> 2.0.5)
-      image_size (~> 1.1.2)
-      in_threads (~> 1.2.0)
-      progress (~> 3.0.0)
-    image_size (1.1.5)
-    in_threads (1.2.2)
     json (1.8.1)
     kramdown (1.4.2)
     listen (2.7.11)
@@ -95,9 +84,6 @@ GEM
       middleman-core (>= 3.2)
       net-sftp
       ptools
-    middleman-imageoptim (0.1.4)
-      image_optim (~> 0.9.1)
-      middleman-core (>= 3.0)
     middleman-livereload (3.1.1)
       em-websocket (>= 0.2.0)
       middleman-core (>= 3.0.2)
@@ -115,21 +101,17 @@ GEM
       middleman (>= 3.0.0)
       rake
     mime-types (2.1)
-    mini_portile (0.6.0)
     minitest (5.4.2)
     multi_json (1.10.1)
     net-sftp (2.1.2)
       net-ssh (>= 2.6.5)
     net-ssh (2.9.1)
-    nokogiri (1.6.3.1)
-      mini_portile (= 0.6.0)
     padrino-helpers (0.12.3)
       i18n (~> 0.6, >= 0.6.7)
       padrino-support (= 0.12.3)
       tilt (~> 1.4.1)
     padrino-support (0.12.3)
       activesupport (>= 3.1)
-    progress (3.0.1)
     ptools (1.2.6)
     rack (1.5.2)
     rack-livereload (0.3.15)
@@ -157,10 +139,6 @@ GEM
     tilt (1.4.1)
     timers (4.0.1)
       hitimes
-    twitter_cldr (3.0.10)
-      camertron-eprun
-      json
-      tzinfo
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
     uber (0.0.9)
@@ -174,13 +152,8 @@ PLATFORMS
 DEPENDENCIES
   middleman (~> 3.3.6)
   middleman-deploy
-  middleman-imageoptim (~> 0.1.3)
   middleman-livereload (~> 3.1.0)
   middleman-minify-html
   middleman-svg-fallback
   middleman-thumbnailer!
-  nokogiri
   sass
-  twitter_cldr
-  tzinfo-data
-  wdm (~> 0.1.0)

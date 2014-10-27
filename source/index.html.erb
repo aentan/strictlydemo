@@ -36,13 +36,14 @@ title: Demo Videos for Products, Services and Startups
 
 <section id="demos">
   <article class="demo">
-    <% link_to '#', class: 'demo-thumb' do %>
+    <% link_to '#', class: 'demo-thumb', data: { vid: '58122318' } do %>
     <span data-picture data-alt="Mewe">
       <span data-src="<%= thumbnail_url('/assets/images/thumbs/mewe.jpg', :thumb) %>"></span>
       <span data-src="<%= thumbnail_url('/assets/images/thumbs/mewe.jpg', :thumb_2x) %>"  data-media="(min-device-pixel-ratio: 2.0), (-webkit-min-device-pixel-ratio: 2.0)"></span>
       <noscript>
         <img src="<%= thumbnail_url('/assets/images/thumbs/mewe.jpg', :thumb) %>" alt="Mewe">
       </noscript>
+      <div class="demo-play-overlay">Play</div>
     </span>
     <% end %>
     <div class="demo-info">
@@ -56,13 +57,14 @@ title: Demo Videos for Products, Services and Startups
     </div>
   </article>
   <article class="demo">
-    <% link_to '#', class: 'demo-thumb' do %>
+    <% link_to '#', class: 'demo-thumb', data: { vid: '45160131' } do %>
     <span data-picture data-alt="Havenly">
       <span data-src="<%= thumbnail_url('/assets/images/thumbs/havenly.jpg', :thumb) %>"></span>
       <span data-src="<%= thumbnail_url('/assets/images/thumbs/havenly.jpg', :thumb_2x) %>"  data-media="(min-device-pixel-ratio: 2.0), (-webkit-min-device-pixel-ratio: 2.0)"></span>
       <noscript>
         <img src="<%= thumbnail_url('/assets/images/thumbs/havenly.jpg', :thumb) %>" alt="Havenly">
       </noscript>
+      <div class="demo-play-overlay">Play</div>
     </span>
     <% end %>
     <div class="demo-info">

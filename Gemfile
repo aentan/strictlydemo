@@ -8,10 +8,10 @@ gem "middleman", "~>3.3.6"
 gem "middleman-livereload", "~> 3.1.0"
 
 # For faster file watcher updates on Windows:
-gem "wdm", "~> 0.1.0", :platforms => [:mswin, :mingw]
+# gem "wdm", "~> 0.1.0", :platforms => [:mswin, :mingw]
 
 # Windows does not come with time zone data
-gem "tzinfo-data", platforms: [:mswin, :mingw]
+# gem "tzinfo-data", platforms: [:mswin, :mingw]
 
 # Minify HTML
 gem "middleman-minify-html"
@@ -20,16 +20,16 @@ gem "middleman-minify-html"
 gem 'sass'
 
 # Imageoptim
-gem "middleman-imageoptim", "~> 0.1.3"
+# gem "middleman-imageoptim", "~> 0.1.3"
 
 # Used for publishing to Github Pages
 gem 'middleman-deploy'
 
 # For formatting data
-gem "twitter_cldr"
+# gem "twitter_cldr"
 
 # For HTML parsing
-gem "nokogiri"
+# gem "nokogiri"
 
 # SVG fallback
 gem 'middleman-svg-fallback'
