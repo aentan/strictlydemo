@@ -10,8 +10,274 @@
 }
 
 
+// Scaffold
 
-
-@media (min-width: $screen-md-min) {
-  //
+a {
+  color: $text-color;
 }
+
+
+// Layout
+
+body {
+  background-color: $brand-primary;
+  color: $text-color;
+}
+
+#main {
+  @include clearfix();
+  margin: 0 auto;
+  max-width: $screen-md;
+  @media (min-width: $screen-md-min) {
+    margin: 16px auto;
+    border: 1px solid $grid-border;
+  }
+}
+
+#main > header {
+  position: relative;
+  height: 128px;
+  border-bottom: 1px solid $grid-border;
+  @media (min-width: $screen-sm-min) {
+    height: 208px;
+  }
+  @media (min-width: $screen-md-min) {
+    height: 272px;
+  }
+  img {
+    @include bullseye();
+    position: absolute;
+    width: 100%;
+    height: auto;
+    max-height: 44px;
+    @media (min-width: $screen-sm-min) {
+      max-height: 80px;
+    }
+    @media (min-width: $screen-md-min) {
+      max-height: 96px;
+    }
+  }
+}
+
+#intro {
+  padding: 0 48px;
+  text-align: center;
+  @media (min-width: $screen-md-min) {
+    @include grid(10);
+    padding: 32px 48px;
+    height: 224px;
+    border-bottom: 1px solid $grid-border;
+    border-right: 1px solid $grid-border;
+  }
+}
+
+#cta {
+  position: relative;
+  margin-top: -32px;
+  padding: 80px 48px 64px;
+  text-align: center;
+  border-bottom: 1px solid $grid-border;
+  @media (min-width: $screen-md-min) {
+    @include grid(6);
+    margin-top: 0;
+    height: 224px;
+  }
+  .cta {
+    @include bullseye();
+    position: absolute;
+    display: inline-block;
+    padding: 16px 24px;
+    font-family: $heading-font-family;
+    font-size: $font-size-lead;
+    line-height: 1;
+    white-space: nowrap;
+    text-decoration: none;
+    border: 2px solid $grid-border;
+    border-radius: 32px;
+  }
+}
+
+#credits {
+  position: relative;
+  @media (min-width: $screen-md-min) {
+    @include grid(6);
+  }
+  #credit-logos {
+    @include clearfix();
+    position: relative;
+  }
+  .credit-logo {
+    @include grid(8);
+    @include text-hide();
+    display: block;
+    height: 152px;
+    border-bottom: 1px solid $grid-border;
+    border-right: 1px solid $grid-border;
+    &#credit-big3 {
+      background: url('../images/ui/big3.png') no-repeat 50% 50%;
+      background-size: 80px 80px;
+    }
+
+    &#credit-sunday {
+      background: url('../images/ui/sunday.svg') no-repeat 50% 50%;
+      @media (max-width: $screen-sm-max) {
+        border-right: 0;
+      }
+    }
+    
+  }
+  #credit-caption {
+    position: relative;
+    float: left;
+    width: 100%;
+    height: 72px;
+    text-align: center;
+    border-bottom: 1px solid $grid-border;
+    @media (min-width: $screen-md-min) {
+      border-right: 1px solid $grid-border;
+    }
+    p {
+      @include bullseye();
+      position: absolute;
+      margin: 0;
+      width: 100%;
+      strong {
+        font-family: $heading-font-family;
+      }
+    }
+  }
+}
+
+#see-our-videos {
+  text-align: center;
+  border-bottom: 1px solid $grid-border;
+  background: url('../images/ui/arrow_down.svg') no-repeat 50% 176px;
+  @media (min-width: $screen-md-min) {
+    @include grid(4);
+    height: 224px;
+    border-right: 1px solid $grid-border;
+    background-position: 50% 128px;
+  }
+  a {
+    display: block;
+    height: 100%;
+    line-height: 136px;
+    padding-bottom: 64px;
+    text-decoration: none;
+  }
+}
+
+
+#contact {
+  @media (min-width: $screen-md-min) {
+    @include grid(6);
+  }
+  .contact-item {
+    position: relative;
+    display: block;
+    height: #{(224/3)}px;
+    line-height: #{(224/3)}px;
+    padding-left: 96px;
+    text-decoration: none;
+    text-align: center;
+    border-bottom: 1px solid $grid-border;
+    &:before {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 96px;
+      height: 100%;
+      content: '';
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      border-right: 1px solid $grid-border;
+    }
+    &:nth-child(even) {
+      padding-left: 0;
+      padding-right: 96px;
+      &:before {
+        left: auto;
+        right: 0;
+        border-right: 0;
+        border-left: 1px solid $grid-border;
+      }
+    }
+  }
+  $items: mail call twitter;
+  @each $item in $items {
+    .contact-#{$item} {
+      &:before {
+        background-image: url('../images/ui/contact_#{$item}.svg');
+      }
+    }
+  }
+}
+
+
+#demos {
+  @include grid(16);
+  clear: both;
+  .demo {
+    @include clearfix();
+    position: relative;
+    margin: 48px 0;
+    @media (min-width: $screen-md-min) {
+      margin: 0;
+    }
+    .demo-thumb {
+      @media (min-width: $screen-md-min) {
+        @include grid(6);
+        border-bottom: 1px solid $grid-border;
+      }
+    }
+    span[data-picture] {
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+    }
+    .demo-info {
+      @media (min-width: $screen-md-min) {
+        @include grid(10);
+      }
+      .demo-summary {
+        padding: 8px 32px;
+        border-bottom: 1px solid $grid-border;
+        @media (min-width: $screen-md-min) {
+          height: 154px;
+        }
+      }
+      .demo-meta {
+        margin: 0;
+        height: 56px;
+        border-bottom: 1px solid $grid-border;
+        dt, dd {
+          margin: 0;
+          padding: 16px;
+          text-align: center;
+        }
+        dt {
+          @include grid(4);
+          font-family: $heading-font-family;
+          border-right: 1px solid $grid-border;
+        }
+        dd {
+          @include grid(12);
+        }
+      }
+    }
+  }
+}
+
+#main > footer {
+  @include grid(16);
+  text-align: center;
+  padding: 8px;
+  border-top: 1px solid $grid-border;
+  @media (min-width: $screen-md-min) {
+    border: 0;
+  }
+}
+
+

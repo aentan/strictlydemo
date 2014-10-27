@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="36px" height="36px" viewBox="0 0 36 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.1.1 (8761) - http://www.bohemiancoding.com/sketch -->
+    <title>arrow_down</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="website-md" sketch:type="MSArtboardGroup" transform="translate(-494.000000, -670.000000)">
+            <g id="See" sketch:type="MSLayerGroup" transform="translate(54.000000, 544.000000)">
+                <g id="arrow_down" transform="translate(442.000000, 128.000000)" sketch:type="MSShapeGroup">
+                    <circle id="Oval-3" stroke="#FFFFFF" fill="#E74C3C" cx="16" cy="16" r="16"></circle>
+                    <path d="M16.2421875,23 L11.203125,18.125 L12.5507812,16.765625 L15.2578125,19.3789062 L15.2578125,8.984375 L17.203125,8.984375 L17.203125,19.4023438 L19.9804688,16.765625 L21.328125,18.171875 L16.2421875,23 Z" fill="#FFFFFF"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

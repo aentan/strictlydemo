@@ -48,3 +48,8 @@ MIXINS
   left: 50%;
   @include translate(-50%, -50%);
 }
+
+@mixin grid($col: 16) {
+  float: left;
+  width: $col/16 * 100%;
+}

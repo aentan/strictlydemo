@@ -1,6 +1,8 @@
 body {
   font-family: $text-font-family;
   font-weight: $text-font-weight;
+  font-size: $font-size-base;
+  -webkit-font-smoothing: antialiased;
 }
 
 h1, h2, h3, h4, h5, h6,
@@ -14,31 +16,24 @@ strong, b {
   font-weight: $strong-font-weight;
 }
 
-h1 {
-  text-align: center;
-  font-size: 32px;
-  font-weight: 700;
-  line-height: 40px;
-  text-transform: uppercase;
-  letter-spacing: 1em;
-}
-
 p.lead {
-  text-align: center;
-  font-size: 32px;
-  font-weight: 400;
-  line-height: 1.5;
-  margin-bottom: 1.5em;
-  a {
-    text-decoration: none;
+  font-size: $font-size-lead;
+  line-height: $line-height-lead;
+  strong {
+    font-family: $heading-font-family;
   }
 }
 
-p {
+.bug {
+  @include bullseye();
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  padding: 2px 0 6px;
   font-size: 24px;
-  line-height: 36px;
-}
-
-.text-center {
+  line-height: 24px;
   text-align: center;
+  border: 1px solid $grid-border;
+  border-radius: 50%;
+  background-color: $brand-primary;
 }

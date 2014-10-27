@@ -1,22 +1,82 @@
 ---
-title: Fresh and mouthwatering identities
+title: Demo Videos for Products, Services and Startups
 ---
-<a href="#about" id="info">Info</a>
+<header>
+  <%= image_tag '/assets/images/ui/strictlydemo.svg' %>
+</header>
 
-<div id="about">
-  <div class="wrapper">
-    <p class="lead">We create fresh and mouthwatering identities for fresh businesses.</p>
-    <p>Scroll to view</p>
+<section id="intro">
+  <p class="lead">We direct, film, animate and produce <strong>Demo Videos</strong> for any kind of products, services and startups. Strictly demos.</p>
+</section>
+
+<section id="cta">
+  <%= link_to 'Make Me a Video', '#', class: 'cta' %>
+</section>
+
+<section id="credits">
+  <div id="credit-logos">
+    <%= link_to 'Big 3', 'http://big3.sg', id: 'credit-big3', class: 'credit-logo' %>
+    <%= link_to 'Sunday', 'http://madebysunday.co', id: 'credit-sunday', class: 'credit-logo' %>
+    <span class="bug">&amp;</span>
   </div>
-</div>
+  <div id="credit-caption">
+    <p>A <strong>Big 3</strong> &amp; <strong>Sunday</strong> Collaboration</p>
+  </div>
+</section>
 
-<div id="grid">
-<% ['sunday', 'angelround', 'multiply', '6degrees', 'lifeopp', 'curioucity', 'found', 'fisheye'].each do |work| %>
-  <%= partial(:tile, locals: { :work => work }) %>
-<% end %>
+<section id="see-our-videos">
+  <%= link_to 'See our videos', '#demos' %>
+</section>
 
-  <%= partial 'lemons.svg' %>
+<section id="contact">
+  <%= link_to 'valli@madebysunday.co', 'mailto:valli@madebysunday.co', class: 'contact-item contact-mail' %>
+  <%= link_to '+65 8162 3547', 'tel:+65 8162 3547', class: 'contact-item contact-call' %>
+  <%= link_to '@weluvsunday', 'http://twitter.com/weluvsunday', class: 'contact-item contact-twitter' %>
+</section>
 
-</div>
+<section id="demos">
+  <article class="demo">
+    <% link_to '#', class: 'demo-thumb' do %>
+    <span data-picture data-alt="Mewe">
+      <span data-src="<%= thumbnail_url('/assets/images/thumbs/mewe.jpg', :thumb) %>"></span>
+      <span data-src="<%= thumbnail_url('/assets/images/thumbs/mewe.jpg', :thumb_2x) %>"  data-media="(min-device-pixel-ratio: 2.0), (-webkit-min-device-pixel-ratio: 2.0)"></span>
+      <noscript>
+        <img src="<%= thumbnail_url('/assets/images/thumbs/mewe.jpg', :thumb) %>" alt="Mewe">
+      </noscript>
+    </span>
+    <% end %>
+    <div class="demo-info">
+      <div class="demo-summary">
+        <p><strong>Mewe</strong> is the first stop for volunteer travel. We help purpose-driven travellers find, book and rate their ideal volunteer trip and enable them to fundraise for their selected cause.</p>
+      </div>
+      <dl class="demo-meta">
+        <dt>Client</dt>
+        <dd>Mewe</dd>
+      </dl>
+    </div>
+  </article>
+  <article class="demo">
+    <% link_to '#', class: 'demo-thumb' do %>
+    <span data-picture data-alt="Havenly">
+      <span data-src="<%= thumbnail_url('/assets/images/thumbs/havenly.jpg', :thumb) %>"></span>
+      <span data-src="<%= thumbnail_url('/assets/images/thumbs/havenly.jpg', :thumb_2x) %>"  data-media="(min-device-pixel-ratio: 2.0), (-webkit-min-device-pixel-ratio: 2.0)"></span>
+      <noscript>
+        <img src="<%= thumbnail_url('/assets/images/thumbs/havenly.jpg', :thumb) %>" alt="Havenly">
+      </noscript>
+    </span>
+    <% end %>
+    <div class="demo-info">
+      <div class="demo-summary">
+        <p><strong>Havenly</strong> supports stay-at-home chefs by allowing people to order their authentic home-cooked meals online. Each meal purchased provides a household with an extra income and supports their local economy.</p>
+      </div>
+      <dl class="demo-meta">
+        <dt>Client</dt>
+        <dd>Havenly</dd>
+      </dl>
+    </div>
+  </article>
+</section>
 
-<%= partial 'lemons.svg' %>
+<footer>
+  <p>&copy; 2014 Sunday</p>
+</footer>

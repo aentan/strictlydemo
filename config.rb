@@ -83,10 +83,8 @@ activate :directory_indexes
 require 'middleman-thumbnailer'
 activate :thumbnailer, 
   :dimensions => {
-    :pri => '384x',
-    :pri_2x => '768x',
-    :sec => '128x',
-    :sec_2x => '256x'
+    :thumb => '384x',
+    :thumb_2x => '768x',
   },
   :include_data_thumbnails => true,
   :namespace_directory => %w(thumbs)
