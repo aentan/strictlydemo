@@ -305,26 +305,45 @@ body {
 #player,
 #about {
   display: none;
-  position: absolute;
+  position: fixed;
   z-index: 1000;
   left: 0;
   top: 0;
+  bottom: 0;
+  right: 0;
   width: 100%;
   height: 100%;
   background-color: $brand-primary;
-  iframe,
-  .content {
-    @include bullseye();
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  iframe{
     position: absolute;
+    width: 100%;
     max-width: 800px;
-    max-height: 450px;
     border: 2px solid $grid-border;
   }
 }
 
+#about {
+  .content {
+    @include x-align-center;
+    position: absolute;
+    width: 100%;
+    max-width: 800px;
+    border: 2px solid $grid-border;
+  }
+}
+
+#player iframe {
+  @include bullseye();
+  max-height: 450px;
+}
+
+
 .close {
   @include text-hide();
-  position: absolute;
+  position: fixed;
   left: 16px;
   top: 16px;
   padding: 0;
@@ -336,6 +355,7 @@ body {
 
 .player-active,
 .about-active {
+  position: relative;
   overflow: hidden;
 }
 
@@ -345,7 +365,11 @@ body {
 }
 
 #about .content {
-  padding: 16px 32px;
+  padding: 64px 32px 16px;
+  @media (min-width: $screen-sm-min) {
+    margin: 32px 0;
+    padding: 16px 32px;
+  }
 }
 
 
