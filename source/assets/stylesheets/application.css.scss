@@ -335,9 +335,36 @@ body {
   }
 }
 
-#player iframe {
-  @include bullseye();
-  max-height: 450px;
+#player {
+  iframe {
+    @include bullseye();
+    max-height: 450px;
+  }
+  .player-credit {
+    display: block;
+    position: fixed;
+    right: 16px;
+    top: 16px;
+    line-height: 1;
+    font-size: 0.9em;
+    border: 1px solid $grid-border;
+    > * {
+      float: left;
+      display: block;
+      padding: 6px 8px;
+    }
+    strong {
+      font-family: $heading-font-family;
+      border-right: 1px solid $grid-border;
+    }
+    a {
+      text-decoration: none;
+      &:hover {
+        background-color: $text-color;
+        color: $brand-primary;
+      }
+    }
+  }
 }
 
 

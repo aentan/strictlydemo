@@ -45,7 +45,7 @@ $(function() {
     e.preventDefault();
     $('#player').remove();
     $body
-      .append('<div id="player" style="tops:' + $body.scrollTop() + 'px"><iframe src="//player.vimeo.com/video/' + $(this).data('vid') + '?title=0&amp;byline=0&amp;portrait=0&amp;color=e74c3c&amp;autoplay=1" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe><button class="close">Close</button></div')
+      .append('<div id="player" style="tops:' + $body.scrollTop() + 'px"><iframe src="//player.vimeo.com/video/' + $(this).data('vid') + '?title=0&amp;byline=0&amp;portrait=0&amp;color=e74c3c&amp;autoplay=1" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe><span class="player-credit"><strong>Credit</strong> <a href="' + $(this).data('credit-url') + '" target="_blank">' + $(this).data('credit') + '</a></span><button class="close">Close</button></div')
     .addClass('player-active');
     responsiveVideos();
   });
