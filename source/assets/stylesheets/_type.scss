@@ -24,6 +24,12 @@ p.lead {
   }
 }
 
+.text-center {
+  text-align: center;
+}
+
+@include selection(cyan, $text-color);
+
 .bug {
   @include bullseye();
   position: absolute;

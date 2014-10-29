@@ -53,3 +53,14 @@ MIXINS
   float: left;
   width: $col/16 * 100%;
 }
+
+@mixin selection($highlight-color, $text-color) {
+  ::-moz-selection {
+    color: $text-color;
+    background: $highlight-color;
+  }
+  ::selection {
+    color: $text-color; 
+    background: $highlight-color;
+  }
+}
