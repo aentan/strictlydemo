@@ -17,6 +17,10 @@ a {
   color: $text-color;
 }
 
+.img-responsive {
+  @include img-responsive;
+}
+
 
 // Layout
 
